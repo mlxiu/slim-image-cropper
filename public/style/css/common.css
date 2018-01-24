@@ -1,0 +1,237 @@
+*{
+    margin: 0px;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    height: 100%;
+    min-width: 320px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #636b6f;
+    background: #f7f7f7;
+    font-family: Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial,sans-ser;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+a, a:link, a:active, a:hover, a:visited, a:focus{
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+    list-style-type: none;
+}
+
+/*定义浏览器下拉条样式*/
+body::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+body::-webkit-scrollbar-button {
+    display: none;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+body::-webkit-scrollbar-track-piece {
+    background: #ffffff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #8E8E8E;
+    border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #3b3b3b;
+}
+
+body::-webkit-scrollbar-resizer {
+    background-color: #ff6e00;
+}
+
+/*nprogress*/
+#nprogress .bar{
+    background: #2ec7bb;
+}
+
+.navbar{
+   margin-bottom: 0;
+}
+
+/*头部*/
+.navbar-static-top{
+    z-index: 1;
+}
+
+.header{
+    background-color: #fff;
+    border: none;
+    -webkit-box-shadow: 0 1px 5px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 1px 5px rgba(0,0,0,.1);
+    box-shadow: 0 1px 5px rgba(0,0,0,.1);
+    position: relative;
+}
+
+.header .logo {
+    display: block;
+    font: 0/0 a;
+    width: 200px;
+    height: 44px;
+    margin: 13px 20px;
+    background-size: 210px 44px;
+    background: url(../../../image/common/logo-index.png);
+}
+
+/*折叠按钮*/
+.navbar-default .navbar-toggle{
+    background-color: #fff;
+    border: 1px solid #2ec7bb;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    transition: background-color 0.4s;
+}
+
+.navbar-default .navbar-toggle:focus{
+    background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover{
+    background-color: #2ec7bb;
+}
+
+.navbar-default .navbar-toggle:hover > .icon-bar{
+    background-color: #fff;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #2ec7bb;
+}
+
+/*主导航*/
+.header .main-nav{
+    display: inline-block;
+}
+
+.header .main-nav li{
+    float: left;
+    margin-left: 15px;
+    margin-top: 19px;
+}
+
+.header .main-nav li:first-child{
+    margin-left: 0;
+}
+
+.header .main-nav li a{
+    height: 32px;
+    line-height: 32px;
+    font-size: 16px;
+    padding: 0 15px;
+    border-radius: 5px;
+    color: #000;
+}
+
+.header .main-nav li a.active{
+    color: #fff;
+    background-color: #2ec7bb;
+}
+
+.header .main-nav li a:hover{
+    color: #fff;
+    background-color: #2ec7bb;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: #2ec7bb;
+}
+
+
+/*登录注册按钮调整*/
+.navbar-nav>li {
+    margin-top: 20px;
+}
+
+.nav>li>a {
+    padding: 5px 10px;
+}
+
+
+@media (max-width: 768px) {
+    #app-navbar-collapse{
+        text-align: center;
+    }
+}
+
+
+/*底部*/
+.footer{
+    width: 100%;
+    height: 60px;
+    margin: -60px auto;
+    background: #282828;
+    text-align: center;
+}
+
+.footer span{
+    line-height: 60px;
+    color: #ccc;
+    font-size: 14px;
+    font-family: 'Microsoft Yahei';
+}
+
+/*普通按钮*/
+.btn-owner{
+    color: #fff;
+    background-color: #2ec7bb;
+    border-bottom: 2px solid #21baae;
+    padding:4px 12px;
+}
+
+.btn-owner:hover{
+    color: #fff;
+    background-color: #21baae;
+    border-bottom: 2px solid #3eb1a8;
+}
+
+/* 鼠标事件禁用 */
+.event-disabled {
+    pointer-events: none;
+}
+
+/* 话题页面距离顶部的距离 */
+.container-top{
+    margin-top: 40px;
+}
+
+.main-rect{
+    /* box-shadow: 0 1px 0 0 #ddd, 0 0 0 1px #ddd; */
+    border-radius: 0;
+    background-color: #fff;
+    border: 1px solid #dde2e8;
+}
+
+.panel{
+    border-radius: 0px;
+    box-shadow: none;
+    border: 1px solid #dde2e8;
+}
+
+.panel .panel-heading {
+    border-bottom: 1px solid #eeeeee;
+    background-color: #fff;
+    background-image: none;
+}
