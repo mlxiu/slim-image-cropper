@@ -10,10 +10,6 @@
       <img src="{{ $avatar }}">
       <a href="javascript:void(0)"><i class="glyphicon glyphicon-edit" aria-hidden="true"></i>&nbsp; 更换头像</span></a>
     </div>
-
-    <div class="user-details">
-      <div class="user-nickname">{{ $nickname . '(' . $viewid . ')' }}</div>
-    </div>
   </div>
 </div>
 
@@ -42,6 +38,13 @@
                         <input class="form-control" name="nickname" type="text" value="{{ $nickname}}">
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">邮 箱</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" name="email" type="email" placeholder="请输入邮箱">
+                    </div>
+                </div>
           </form>
           </div>
         </div>
@@ -52,10 +55,15 @@
 @endsection
 
 @section('style')
+<link href="{{ asset('style/js/slim/slim.min.css') }}" rel="stylesheet">
 <style>
 /* 去掉padding15px*/
 .container-users{
   padding: 0;
+}
+
+.panel-top{
+  margin-top: 30px;
 }
 
 /* 顶部头像 */
@@ -92,53 +100,6 @@
   font-size: 13px;
 }
 
-.info-header .user-details{
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 60px;
-}
-
-.info-header .user-details .user-nickname{
-  font-size: 24px;
-  margin-top: 60px;
-}
-
-.info-header .user-details .user-gold{
-  font-size: 15px;
-  margin-top: 20px;
-}
-
-.info-header .user-details .user-gold span{
-  display: inline-block;
-  margin-left: 6px;
-}
-
-.info-header .user-details .user-gold-grade{
-  font-size: 15px;
-  margin-top: 20px;
-}
-
-.info-header .user-details .user-gold-grade span:first-child{
-  padding:1px 12px;
-  font-size:12px;
-  color: #000;
-  border-radius: 2px;
-  background-color: #fff;
-  margin:0 10px 0 5px;
-}
-
-.info-header .user-details .user-gold-grade span:nth-child(2){
-  display: inline-block;
-  width: 223px;
-  padding: 1px 0;
-  border-radius: 5px;
-  font-size: 12px;
-  text-align: center;
-  background: #099a8f;
-  overflow: hidden;
-  vertical-align: bottom;
-}
-
 /*个人信息*/
 .menu-panel{
     padding: 20px;
@@ -166,27 +127,12 @@
     background-color: #f9f9f9;
 }
 
-/* 右侧区域 */
-.panel-top{
-    margin-top: 20px;
-}
-
-.panel{
-    border-radius: 0;
-}
-
-/* textarea 禁止任意拖动*/
-textarea
-{
-    width:100%;
-    height:100%;
-    max-width: 100%;
-}
 </style>
 @endsection
 
 @section('script')
 @parent
+<script src="{{ asset('style/js/slim/slim.kickstart.min.js') }}"></script>
 <script type="text/javascript">
 
 </script>
