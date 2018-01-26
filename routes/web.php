@@ -11,4 +11,10 @@
 |
 */
 
-Route::get('/', 'PageController@root')->name('upload');
+// Route::get('/', 'PageController@root')->name('upload');
+
+// Route::post('upload/avatar', 'PageController@upload_avatar')->name('upload-avatar');
+
+Route::get('/', 'PageController@root');
+
+Route::post('upload/avatar', 'ImageController@upload_avatar')->name('upload.avatar');

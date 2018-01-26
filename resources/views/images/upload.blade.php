@@ -7,8 +7,19 @@
 <div class="container-fluid info-header">
   <div class="container">
     <div id="avatar-view" class="avatar">
-      <img src="{{ $avatar }}">
-      <a href="javascript:void(0)"><i class="glyphicon glyphicon-edit" aria-hidden="true"></i>&nbsp; 更换头像</span></a>
+      <!-- laravel post 提交一定带上 token. data-service填好后，要将data-push置为true才会每次裁剪后自动提交 -->
+      <div class="slim"
+           data-service="{{ route('upload.avatar', ['_token' => csrf_token(), 'viewid' => $viewid]) }}"
+           data-push="true"
+           data-ratio="1:1"
+           data-label="点击选择图片"
+           data-size="360,360"
+           data-max-file-size="2"
+           style="border:3px solid #fff !important; background-color: none !important; background:none !important;border-radius:50%;">
+          <img src="{{ $avatar }}" alt=""/>
+          <input type="file" name="slim[]"/>
+       </div>
+      <!-- <a href="javascript:void(0)"><i class="glyphicon glyphicon-edit" aria-hidden="true"></i>&nbsp; 更换头像</span></a> -->
     </div>
   </div>
 </div>
@@ -48,6 +59,13 @@
           </form>
           </div>
         </div>
+
+        <div>
+           <div class="frame"  style="width:360px;height:240px;">
+              <input type="file" id="myCropper"/>
+           </div>
+        </div>
+
       </div>
 
 </div>
@@ -76,18 +94,9 @@
 .info-header .avatar{
   display: inline-block;
   width: 150px;
-  height: 240px;
-  text-align: center;
+  height: 150px;
   margin-left: 30px;
-}
-
-.info-header .avatar img{
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 3px solid #fff;
   margin-top:45px;
-  cursor: pointer;
 }
 
 .info-header .avatar a{
@@ -127,6 +136,18 @@
     background-color: #f9f9f9;
 }
 
+/* 裁剪 */
+.slim .slim-file-hopper {
+  /* z-index: 2;
+  cursor: auto; */
+}
+
+.slim{
+   background-color: #fff !important;
+   border-radius: 8px;
+   border: 1px solid #ccc;
+}
+
 </style>
 @endsection
 
@@ -134,6 +155,47 @@
 @parent
 <script src="{{ asset('style/js/slim/slim.kickstart.min.js') }}"></script>
 <script type="text/javascript">
+var cropper = new Slim(document.getElementById('myCropper'), {
+	ratio: '3:2',
+	minSize: {
+		width: 360,
+		height: 240,
+	},
+	size: {
+		width: 720,
+		height: 480,
+	},
+	service: '#',
+	willSave: function(data, ready) {
+		// ready(data);
+	},
+	meta: {
+        userId:'1234'
+  },
+	download: false,
+	instantEdit: true,
+	label: '上传：单击此处或将图像文件拖到其上',
+	buttonConfirmLabel: '确定',
+	buttonConfirmTitle: '确定',
+	buttonCancelLabel: '取消',
+	buttonCancelTitle: '取消',
+	buttonEditTitle: '编辑',
+	buttonRemoveTitle: '清除',
+	buttonDownloadTitle: '下载',
+	buttonRotateTitle: '旋转',
+	buttonUploadTitle: '上传',
+	statusImageTooSmall:'这张照片太小了。 最小的大小是 360 * 240 像素。'
+});
 
+cropper.load('{{ $avatar }}', function(error, data){
+    cropper.upload(function(error, data, response){
+				console.log(2222);
+    });
+});
+
+function data_did_save()
+{
+    console.log('data_did_save');
+}
 </script>
 @endsection
