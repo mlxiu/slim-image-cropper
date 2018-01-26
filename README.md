@@ -1,7 +1,8 @@
 # 说明
 
 > 官网：[http://slimimagecropper.com/](http://slimimagecropper.com/)  
-> Demo： [https://github.com/trigo-at/slim-image-cropper-test](https://github.com/trigo-at/slim-image-cropper-test)
+> Demo： [https://github.com/trigo-at/slim-image-cropper-test](https://github.com/trigo-at/slim-image-cropper-test)  
+> 字里行间Demo：[https://www.zi.com](https://www.zi.com)
 
 1. 收费请访问官网。
 2. 以laravel框架为例，以个人编辑头像为场景，以demo源码为根本，来记录这次的日志行为。
@@ -40,6 +41,9 @@ chmod -R 777 uploads
 ```
 再次访问即可正常。
 
+访问图片信息，请看控制台。
+
+# 效果截图
 
 
 
