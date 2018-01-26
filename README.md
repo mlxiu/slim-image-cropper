@@ -2,11 +2,11 @@
 
 > 官网：[http://slimimagecropper.com/](http://slimimagecropper.com/)  
 > Demo： [https://github.com/trigo-at/slim-image-cropper-test](https://github.com/trigo-at/slim-image-cropper-test)  
-> 字里行间Demo：[https://www.zi.com](https://www.zi.com)
+> 字里行间Demo(其上传个人头像，文章中插入的图片，皆是使用slim cropper)：[https://zi.com](https://zi.com)
 
 1. 收费请访问官网。
 2. 以laravel框架为例，以个人编辑头像为场景，以demo源码为根本，来记录这次的日志行为。
-
+3. 该代码使用的皮肤为官方默认皮肤。如果定制，需要自己手动修改。
 
 # 安装
 
