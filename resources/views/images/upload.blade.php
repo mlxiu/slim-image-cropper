@@ -187,11 +187,11 @@ var cropper = new Slim(document.getElementById('myCropper'), {
 	statusImageTooSmall:'这张照片太小了。 最小的大小是 360 * 240 像素。'
 });
 
-cropper.load('{{ $avatar }}', function(error, data){
-    cropper.upload(function(error, data, response){
-				console.log(2222);
-    });
-});
+// cropper.load('{{ $avatar }}', function(error, data){
+//     cropper.upload(function(error, data, response){
+// 				console.log(2222);
+//     });
+// });
 
 </script>
 @endsection
