@@ -45,5 +45,11 @@ chmod -R 777 uploads
 
 # 效果截图
 
+![file](https://dn-phphub.qbox.me/uploads/images/201801/26/15778/dQGEY75yHE.png)
 
+![file](https://dn-phphub.qbox.me/uploads/images/201801/26/15778/okY6nXWZpq.png)
+
+![file](https://dn-phphub.qbox.me/uploads/images/201801/26/15778/FDXHf6ckVT.png)
+
+![file](https://dn-phphub.qbox.me/uploads/images/201801/26/15778/uDuaVnZnRD.png)
 
