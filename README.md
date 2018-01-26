@@ -11,13 +11,20 @@
 
 ```
 git clone https://github.com/mlxiu/slim-image-cropper.git
+
 mv slim-image-cropper slim
+
 cd slim
+
 # 安装插件
 composer install
+
 # 准备配置（主要修改APP_URL）
 cp .env.example .env
 vi .env
+
+# 生成key
+php artisan key:generate
 ```
 
 访问即可。
