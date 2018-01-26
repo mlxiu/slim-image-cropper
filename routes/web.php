@@ -18,3 +18,5 @@
 Route::get('/', 'PageController@root');
 
 Route::post('upload/avatar', 'ImageController@upload_avatar')->name('upload.avatar');
+
+Route::post('upload/topics', 'ImageController@upload_topics')->name('upload.topics');

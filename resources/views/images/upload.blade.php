@@ -61,7 +61,7 @@
         </div>
 
         <div>
-           <div class="frame"  style="width:360px;height:240px;">
+           <div class="frame"  style="width:360px;height:240px;margin-bottom:20px;">
               <input type="file" id="myCropper"/>
            </div>
         </div>
@@ -165,13 +165,13 @@ var cropper = new Slim(document.getElementById('myCropper'), {
 		width: 720,
 		height: 480,
 	},
-	service: '#',
 	willSave: function(data, ready) {
-		// ready(data);
+	  ready(data);
 	},
 	meta: {
-        userId:'1234'
+        viewid:{{ $viewid }}
   },
+  service: "{{ route('upload.topics', ['_token' => csrf_token()]) }}",
 	download: false,
 	instantEdit: true,
 	label: '上传：单击此处或将图像文件拖到其上',
@@ -193,9 +193,5 @@ cropper.load('{{ $avatar }}', function(error, data){
     });
 });
 
-function data_did_save()
-{
-    console.log('data_did_save');
-}
 </script>
 @endsection

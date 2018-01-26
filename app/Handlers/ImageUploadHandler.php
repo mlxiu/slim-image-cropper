@@ -31,8 +31,18 @@ class ImageUploadHandler
             mkdir($upload_path, 0777, true);
         }
 
-        $img = base64_decode(str_replace('data:image/jpeg;base64,', '', $file));
-        $img = base64_decode(str_replace('data:image/png;base64,', '', $file));
+        if(stripos($file, 'data:image/jpeg;base64,') === 0)
+        {
+            $img = base64_decode(str_replace('data:image/jpeg;base64,', '', $file));
+        }
+        else if(stripos($file, 'data:image/png;base64,') === 0)
+        {
+            $img = base64_decode(str_replace('data:image/png;base64,', '', $file));
+        }
+        else
+        {
+            return array('error' => '非图片文件');
+        }
 	      $result = file_put_contents($upload_path . $file_name, $img); //返回的是字节数
         if($result == FALSE)
         {

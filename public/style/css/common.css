@@ -85,15 +85,6 @@ body::-webkit-scrollbar-resizer {
     position: relative;
 }
 
-.header .logo {
-    display: block;
-    font: 0/0 a;
-    width: 200px;
-    height: 44px;
-    margin: 13px 20px;
-    background-size: 210px 44px;
-    background: url(../../../image/common/logo-index.png);
-}
 
 /*折叠按钮*/
 .navbar-default .navbar-toggle{
