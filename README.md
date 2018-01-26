@@ -29,6 +29,17 @@ php artisan key:generate
 
 访问即可。
 
+如果是 linux系统，请设置访问权限
+```
+chmod -R 777 storage
+
+# 创建uploads目录，使得权限可写入
+cd public
+mkdir uploads
+chmod -R 777 uploads
+```
+再次访问即可正常。
+
 
 
 
