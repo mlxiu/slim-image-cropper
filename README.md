@@ -7,6 +7,21 @@
 2. 以laravel框架为例，以个人编辑头像为场景，以demo源码为根本，来记录这次的日志行为。
 
 
+# 安装
+
+```
+git clone https://github.com/mlxiu/slim-image-cropper.git
+mv slim-image-cropper slim
+cd slim
+# 安装插件
+composer install
+# 准备配置（主要修改APP_URL）
+cp .env.example .env
+vi .env
+```
+
+访问即可。
+
 
 
 
